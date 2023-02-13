@@ -1,0 +1,14 @@
+@import "vars/fonts";
+@import "vars/vars";
+
+body {
+  @include fontRegular();
+}
+
+h1{
+  @include fontBold();
+}
+
+h2{
+  @include fontSemibold();
+}

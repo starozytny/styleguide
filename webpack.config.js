@@ -71,6 +71,8 @@ Encore
     .addEntry('admin_help',         './assets/admin/js/pages/help.js')
     .addEntry('admin_storage',         './assets/admin/js/pages/storage.js')
 
+    .addEntry('styleguide_app', './assets/styleguide/js/app.js')
+
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
 
