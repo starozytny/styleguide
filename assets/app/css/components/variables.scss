@@ -27,8 +27,14 @@
   --black: #000000;
   --white: #FFFFFF;
 
+  --espaceLayout: 1.2rem;
   --espaceDiv: 1.2rem;
   --espaceEls: 8px;
+
+  --radius0: 4px;
+  --radius1: 8px;
+  --radius2: 12px;
+  --radius3: 24px;
 }
 
 //                      __   _ ____  ___   ___    __
@@ -39,7 +45,7 @@
 //                     |__|                      |__|
 @media (min-width:1280px) {
   :root{
-    --espaceDiv: 1.8rem;
+    --espaceLayout: 1.8rem;
   }
 }
 
@@ -51,6 +57,6 @@
 //                     |__|                       |__|
 @media (min-width: 1600px){
   :root{
-    --espaceDiv: 2.4rem;
+    --espaceLayout: 2.4rem;
   }
 }

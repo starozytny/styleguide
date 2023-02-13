@@ -4,16 +4,22 @@
 @import "./components/variables";
 
 @import "./components/layout/layout-0";
-@import "./components/custom/layout/layout-0";
 
 @import "./components/elements/avatar";
-@import "components/elements/button";
+@import "./components/elements/button";
+@import "./components/elements/card";
 
 @import "./components/cookies";
 @import "./components/loader";
 @import "./components/alert";
 @import "./components/form";
 @import "./components/modal";
+
+
+@import "./components/custom/layout/layout-0";
+@import "./components/custom/elements/card";
+
+@import "./pages/pages";
 
 body {
   @include fontRegular();
@@ -23,10 +29,14 @@ h1{
   @include fontBold();
 }
 
-h2{
+h2, .semibold{
   @include fontSemibold();
 }
 
 ul{
   margin: 0;
+}
+
+.txt-primary{
+  color: var(--primary);
 }

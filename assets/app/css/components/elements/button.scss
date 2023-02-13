@@ -1,6 +1,9 @@
+.txt-button, .btn-icon, .btn{
+  @include flex(row, center, center, 8px);
+}
+
 .btn-icon, .btn {
   position: relative;
-  @include flex(row, center, center);
   width: auto;
   text-align: center;
   border: 1px solid transparent;
@@ -9,6 +12,13 @@
 
 .btn-icon{
   padding: 6px;
+}
+
+.txt-button{
+  & > [class^="icon"]{
+    display: inline-block;
+    transform: translateY(-1px);
+  }
 }
 
 $data:

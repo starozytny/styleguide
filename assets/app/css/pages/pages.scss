@@ -1,0 +1,20 @@
+.components{
+  @include flex(row, flex-start, flex-start, var(--espaceEls));
+  flex-wrap: wrap;
+
+  .card-0{
+    .actions{
+      .txt-button{
+        [class^="icon-"]{
+          transition: transform 0.2s linear;
+        }
+
+        &:hover{
+          [class^="icon-"]{
+            transform: translate(4px, -1px);
+          }
+        }
+      }
+    }
+  }
+}

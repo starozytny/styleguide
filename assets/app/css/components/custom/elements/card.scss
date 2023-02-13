@@ -1,0 +1,12 @@
+.card{
+  border-radius: var(--radius1);
+}
+
+.card-0{
+  background-color: var(--alpha);
+
+  .card-header, .card-body{
+    border-bottom: 1px solid var(--grey1);
+  }
+
+}

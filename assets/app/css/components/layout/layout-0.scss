@@ -8,14 +8,14 @@ $headerHeight: 30px;
     font-size: 24px;
 
     .btn-icon{
-      padding: var(--espaceDiv);
+      padding: var(--espaceLayout);
     }
   }
 
   header{
     @include flex(row, center, space-between, var(--espaceEls));
     background-color: red;
-    padding-left: var(--espaceDiv);
+    padding-left: var(--espaceLayout);
 
     .header-logo{
       @include flex(row, center, center);
@@ -43,18 +43,18 @@ $headerHeight: 30px;
 
     .nav-menu{
       position: relative;
-      @include flex(column, flex-start, flex-start, var(--espaceDiv));
+      @include flex(column, flex-start, flex-start, var(--espaceLayout));
       background-color: yellow;
       left: -90vw;
       width: 90vw;
       height: 100vh;
-      padding-bottom: var(--espaceDiv);
+      padding-bottom: var(--espaceLayout);
       transition: left 0.2s ease-in-out;
     }
 
     .nav-menu-header{
       @include flex(row, center, space-between, var(--espaceEls));
-      padding-left: var(--espaceDiv);
+      padding-left: var(--espaceLayout);
       width: 100%;
 
       .nav-menu-header-logo{
@@ -68,7 +68,7 @@ $headerHeight: 30px;
     }
 
     .nav-menu-items{
-      @include flex(column, flex-start, space-between, var(--espaceDiv));
+      @include flex(column, flex-start, space-between, var(--espaceLayout));
       width: 100%; height: 100%;
 
       & > div{
@@ -80,7 +80,7 @@ $headerHeight: 30px;
 
     .nav-menu-item{
       @include flex(row, flex-start, flex-start, 4px);
-      padding: var(--espaceEls) var(--espaceDiv);
+      padding: var(--espaceEls) var(--espaceLayout);
       width: 100%;
       word-break: break-all;
     }
@@ -120,7 +120,7 @@ $headerHeight: 30px;
 
     header{
       min-height: $minHeight;
-      padding-right: var(--espaceDiv);
+      padding-right: var(--espaceLayout);
     }
 
     nav{
@@ -152,7 +152,7 @@ $headerHeight: 30px;
 
       .nav-menu-items{
         flex-direction: row;
-        padding: 0 var(--espaceDiv);
+        padding: 0 var(--espaceLayout);
 
         & > div{
           flex-direction: row;
@@ -188,7 +188,7 @@ $headerHeight: 30px;
       }
 
       .nav-menu-items{
-        padding: var(--espaceDiv) 0;
+        padding: var(--espaceLayout) 0;
       }
     }
 
