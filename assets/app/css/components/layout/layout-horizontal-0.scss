@@ -1,0 +1,50 @@
+.layout-horizontal-0{
+  position: relative;
+
+  $minHeight: 60px;
+
+  header{
+    background-color: red;
+    min-height: $minHeight;
+  }
+
+  nav{
+    background-color: yellow;
+    position: fixed;
+    top: 0; left: -90vw;
+    width: 90vw;
+    min-height: 100%;
+    z-index: 10;
+  }
+
+  .body{
+    background-color: blue;
+    min-height: calc(100vh - ($minHeight * 2));
+  }
+
+  footer{
+    background-color: green;
+    min-height: $minHeight;
+  }
+
+
+  //                      __   _ ____  ___   ___    __
+  //                     | _| / |___ \( _ ) / _ \  |_ |
+  //    _____ _____ _____| |  | | __) / _ \| | | |  | |_____ _____ _____
+  //   |_____|_____|_____| |  | |/ __/ (_) | |_| |  | |_____|_____|_____|
+  //                     | |  |_|_____\___/ \___/   | |
+  //                     |__|                      |__|
+  @media (min-width:1280px) {
+    nav{
+      position: relative;
+      left: 0;
+      width: 100vw;
+      min-height: $minHeight;
+      z-index: 1;
+    }
+
+    .body{
+      min-height: calc(100vh - ($minHeight * 3));
+    }
+  }
+}

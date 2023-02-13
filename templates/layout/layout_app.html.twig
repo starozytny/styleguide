@@ -8,14 +8,29 @@
 {% block body %}
     {% include "layout/components/page-loader.html.twig" %}
 
-    <div class="body">
-        <main>
-            <div>
-                {% block main_content %}{% endblock %}
-            </div>
+    <div class="layout-horizontal-0">
 
-            {% block footer %}{% endblock %}
-        </main>
+        <header>
+
+        </header>
+
+        <nav>
+
+        </nav>
+
+        <div class="body">
+            <main>
+                <div>
+                    {% block main_content %}{% endblock %}
+                </div>
+
+                {% block footer %}{% endblock %}
+            </main>
+        </div>
+
+        <footer>
+
+        </footer>
     </div>
 {% endblock %}
 
