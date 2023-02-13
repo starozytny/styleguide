@@ -111,12 +111,44 @@
   //                     | |  |_|_____\___/ \___/   | |
   //                     |__|                      |__|
   @media (min-width:1280px) {
+    .btn-menu-mobile{
+      display: none;
+    }
+
+    header{
+      min-height: $minHeight;
+      padding-right: var(--espaceDiv);
+    }
+
     nav{
       position: relative;
       left: 0;
-      width: 100vw;
-      min-height: $minHeight;
-      z-index: 1;
+      z-index: 1000;
+      height: auto;
+
+      .nav-menu-header{
+        display: none;
+      }
+
+      .nav-menu{
+        left: 0;
+        height: auto;
+        width: 100vw;
+        padding-bottom: 0;
+      }
+
+      .nav-menu-items{
+        flex-direction: row;
+
+        & > div{
+          flex-direction: row;
+        }
+      }
+
+      .nav-menu-item{
+        width: auto;
+        padding: 1.28rem var(--espaceDiv);
+      }
     }
 
     .body{
