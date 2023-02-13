@@ -1,11 +1,6 @@
 {% extends 'app/layout/layout.html.twig' %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    {{ encore_entry_link_tags('styleguide_app') }}
-{% endblock %}
-
 {% block javascripts %}
     {{ parent() }}
-    {{ encore_entry_script_tags('styleguide_app') }}
+    {{ encore_entry_script_tags('app_styleguide') }}
 {% endblock %}
