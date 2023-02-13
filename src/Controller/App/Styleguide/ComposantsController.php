@@ -15,6 +15,12 @@ class ComposantsController extends AbstractController
         return $this->render('app/pages/styleguide/components/index.html.twig');
     }
 
+    #[Route('/alerts', name: 'alerts')]
+    public function alerts(): Response
+    {
+        return $this->render('app/pages/styleguide/components/alerts.html.twig');
+    }
+
     #[Route('/cards', name: 'cards')]
     public function cards(): Response
     {

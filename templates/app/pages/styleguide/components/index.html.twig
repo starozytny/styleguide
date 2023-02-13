@@ -1,36 +1,39 @@
 {% extends 'app/pages/styleguide/template.html.twig' %}
 
+{% block title %}Components{% endblock %}
+
 {% block main_content %}
     <div class="main-content">
         <div class="components">
-            <div class="card card-0">
-                <div class="card-header">
-                    <div class="card-header-name">Cards</div>
+            {% set components = [
+                {
+                    name: "Alerts", textLink: "Voir les alerts", url: path('app_styleguide_components_alerts'),
+                    content: "Consulter les différentes formes des alerts."
+                },
+                {
+                    name: "Cards", textLink: "Voir les cards", url: path('app_styleguide_components_cards'),
+                    content: "Consulter les différentes formes de cards."
+                },
+                {
+                    name: "Buttons", textLink: "Voir les buttons", url: path('app_styleguide_components_buttons'),
+                    content: "Consulter les différents styles, formes et états des buttons."
+                },
+            ] %}
+
+            {% for elem in components %}
+                <div class="card card-0">
+                    <div class="card-header">
+                        <div class="card-header-name">{{ elem.name }}</div>
+                    </div>
+                    <div class="card-body">{{ elem.content }}</div>
+                    <div class="card-footer actions">
+                        <a href="{{ elem.url }}" class="txt-button txt-primary semibold">
+                            <span>{{ elem.textLink }}</span>
+                            <span class="icon-right-arrow"></span>
+                        </a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    Consulter les différentes formes de cards.
-                </div>
-                <div class="card-footer actions">
-                    <a href="{{ path('app_styleguide_components_cards') }}" class="txt-button txt-primary semibold">
-                        <span>Voir les cards</span>
-                        <span class="icon-right-arrow"></span>
-                    </a>
-                </div>
-            </div>
-            <div class="card card-0">
-                <div class="card-header">
-                    <div class="card-header-name">Buttons</div>
-                </div>
-                <div class="card-body">
-                    Consulter les différents styles, formes et états des buttons.
-                </div>
-                <div class="card-footer actions">
-                    <a href="{{ path('app_styleguide_components_buttons') }}" class="txt-button txt-primary semibold">
-                        <span>Voir les buttons</span>
-                        <span class="icon-right-arrow"></span>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

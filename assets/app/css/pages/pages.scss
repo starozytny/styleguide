@@ -1,5 +1,5 @@
 .components{
-  @include flex(row, flex-start, flex-start, var(--espaceEls));
+  @include flex(row, flex-start, flex-start, var(--espaceDiv));
   flex-wrap: wrap;
 
   .card-0{

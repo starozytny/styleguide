@@ -1,5 +1,9 @@
 .card{
   border-radius: calc(var(--radius) * 2);
+
+  .card-header-name{
+    @include fontSemibold();
+  }
 }
 
 .card-0{
