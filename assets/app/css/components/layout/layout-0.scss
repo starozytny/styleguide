@@ -79,6 +79,7 @@ $headerHeight: 30px;
     }
 
     .nav-menu-item{
+      @include flex(row, flex-start, flex-start, 4px);
       padding: var(--espaceEls) var(--espaceDiv);
       width: 100%;
       word-break: break-all;
@@ -160,7 +161,7 @@ $headerHeight: 30px;
 
       .nav-menu-item{
         width: auto;
-        padding: 20px var(--espaceEls)
+        padding: 20px var(--espaceEls);
       }
     }
 

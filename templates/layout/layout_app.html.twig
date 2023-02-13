@@ -5,9 +5,9 @@
     {{ encore_entry_link_tags('app_app') }}
 {% endblock %}
 
-{% set layout_num = layout_num is defined ? layout_num :0 %}
+{% set layout_num = layout_num is defined ? layout_num : 0 %}
 {% set layout_position = layout_position is defined ? layout_position : "vertical" %}
-{% set layout_type = layout_type is defined ? layout_type : "brut" %}
+{% set layout_type = layout_type is defined ? layout_type : "custom" %}
 
 {% block body %}
     {% include "layout/components/page-loader.html.twig" %}
@@ -15,9 +15,9 @@
     <div class="layout-{{ layout_num }} layout-{{ layout_position }}-{{ layout_num }} {{ layout_type }}">
         <header>
             <div>
-                <div class="header-logo">
+                <a href="{{ path('app_homepage') }}" class="header-logo">
                     <img src="{{ asset('build/app/images/logo.png') }}" alt="logo">
-                </div>
+                </a>
             </div>
             <div>
                 <div class="avatar">

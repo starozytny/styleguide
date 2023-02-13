@@ -4,8 +4,11 @@
     { name: "Accueil",
         path: path('app_homepage'), matchRoute: ['app_homepage']
     },
-    { name: "Accueil", icon: "home",
-        path: path('app_homepage'), matchRoute: ['app_homepage']
+    { name: "Layouts", icon: "layer",
+        path: path('app_styleguide_layouts_index'), matchRoute: ['app_styleguide_layouts_index', 'app_styleguide_layouts_layout']
+    },
+    { name: "Components", icon: "box",
+        path: path('app_styleguide_components_index'), matchRoute: ['app_styleguide_components_index']
     },
 ] %}
 

@@ -9,10 +9,16 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/styleguide/layouts', name: 'app_styleguide_layouts_')]
 class LayoutController extends AbstractController
 {
+    #[Route('/', name: 'index')]
+    public function index(): Response
+    {
+        return $this->render('app/pages/styleguide/layouts/index.html.twig');
+    }
+
     #[Route('/layout/{num}/{position}/{type}', name: 'layout')]
     public function layout($num, $position, $type): Response
     {
-        return $this->render('app/pages/styleguide/layouts/index.html.twig', [
+        return $this->render('app/pages/styleguide/layouts/layout.html.twig', [
             'layout_num' => $num,
             'layout_position' => $position,
             'layout_type' => $type,
