@@ -11,11 +11,49 @@
     <div class="layout-horizontal-0">
 
         <header>
-
+            <div>
+                <div class="header-logo">
+                    <img src="{{ asset('build/app/images/logo.png') }}" alt="logo">
+                </div>
+            </div>
+            <div>
+                <div class="avatar">
+                    <img src="https://robohash.org/random" alt="avatar">
+                </div>
+                <div>
+                    <div class="btn-menu-mobile">
+                        <button class="btn-icon"><span class="icon-menu-1"></span></button>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <nav>
-
+            <div class="nav-menu">
+                <div class="nav-menu-header">
+                    <div class="nav-menu-header-logo">
+                        <img src="{{ asset('build/app/images/logo.png') }}" alt="logo">
+                    </div>
+                    <div class="btn-menu-mobile">
+                        <button class="btn-icon"><span class="icon-close"></span></button>
+                    </div>
+                </div>
+                <div class="nav-menu-items">
+                    <div>
+                        <div class="nav-menu-item">
+                            <a href="{{ path('app_homepage') }}">
+                                <span>Accueil</span>
+                            </a>
+                        </div>
+                        <div class="nav-menu-item">
+                            <a href="{{ path('app_homepage') }}">
+                                <span class="icon-home"></span>
+                                <span>Accueil</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
 
         <div class="body">

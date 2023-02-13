@@ -1,13 +1,15 @@
 @import "vars/fonts";
 @import "vars/vars";
 
-@import "./components/colors";
+@import "./components/variables";
 
 @import "./components/layout/layout-horizontal-0";
 
+@import "./components/elements/avatar";
+@import "components/elements/button";
+
 @import "./components/cookies";
 @import "./components/loader";
-@import "./components/button";
 @import "./components/alert";
 @import "./components/form";
 @import "./components/modal";
@@ -22,4 +24,8 @@ h1{
 
 h2{
   @include fontSemibold();
+}
+
+ul{
+  margin: 0;
 }

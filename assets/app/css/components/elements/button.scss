@@ -1,0 +1,36 @@
+.btn-icon, .btn {
+  position: relative;
+  @include flex(row, center, center);
+  width: auto;
+  text-align: center;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.btn-icon{
+  padding: 6px;
+}
+
+$data:
+        "default" var(--alpha) var(--alpha) var(--txt),
+;
+
+@each $name, $bg, $border, $txt in $data {
+  .btn-icon-#{$name} {
+    background: $bg;
+    border-color: $border;
+    color: $txt;
+  }
+}
+
+//                      __   _  ___ ____  _  _     __
+//                     | _| / |/ _ \___ \| || |   |_ |
+//    _____ _____ _____| |  | | | | |__) | || |_   | |_____ _____ _____
+//   |_____|_____|_____| |  | | |_| / __/|__   _|  | |_____|_____|_____|
+//                     | |  |_|\___/_____|  |_|    | |
+//                     |__|                       |__|
+@media (min-width: 1024px) {
+  .btn-icon, .btn {
+    cursor: pointer;
+  }
+}

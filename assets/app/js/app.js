@@ -19,3 +19,21 @@ let ck = document.getElementById("cookies");
 if(ck){
     createRoot(ck).render(<Cookies {...ck.dataset} />)
 }
+
+menu();
+
+function menu () {
+    let btns = document.querySelectorAll('.btn-menu-mobile');
+    if(btns){
+        btns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                let elements = document.querySelector('nav');
+                if(elements.classList.contains('active')){
+                    elements.classList.remove('active');
+                }else{
+                    elements.classList.add('active');
+                }
+            })
+        })
+    }
+}
