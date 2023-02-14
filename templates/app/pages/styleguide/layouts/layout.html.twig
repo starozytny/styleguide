@@ -1,4 +1,11 @@
 {% extends 'app/pages/styleguide/template.html.twig' %}
 
+{% block breadcrumb %}
+    {% set breadcrumbs = [
+        { icon: 'layer', text: 'Layouts2', url: path('app_styleguide_layouts_index')  }
+    ] %}
+    {{ parent() }}
+{% endblock %}
+
 {% block main_content %}
 {% endblock %}

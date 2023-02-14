@@ -55,17 +55,20 @@
         </nav>
 
         <div class="body">
+
+            {% block breadcrumb %}
+                {% include "layout/components/app/breadcrumbs.html.twig" %}
+            {% endblock %}
+
             <main>
                 <div>
                     {% block main_content %}{% endblock %}
                 </div>
-
-                {% block footer %}{% endblock %}
             </main>
         </div>
 
         <footer>
-
+            {% block footer %}{% endblock %}
         </footer>
     </div>
 {% endblock %}
