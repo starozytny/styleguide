@@ -7,17 +7,10 @@
   nav{
     .nav-menu{
       background-color: var(--grey0);
-      border-right: 1px solid var(--grey1);
-    }
-
-    .nav-menu-items{
-      padding: var(--espaceLayout);
     }
 
     .nav-menu-item{
       color: var(--txt);
-      border-radius: var(--radius);
-      padding-left: 12px; padding-right: 12px;
       transition: background-color 0.2s ease-in-out;
 
       &.active{
@@ -42,5 +35,22 @@
   footer{
     background-color: var(--alpha);
     border-top: 1px solid var(--grey1);
+  }
+}
+
+.layout-vertical-0{
+  nav{
+    .nav-menu{
+      border-right: 1px solid var(--grey1);
+    }
+
+    .nav-menu-items{
+      padding: var(--espaceLayout);
+    }
+
+    .nav-menu-item{
+      border-radius: var(--radius);
+      padding-left: 12px; padding-right: 12px;
+    }
   }
 }
