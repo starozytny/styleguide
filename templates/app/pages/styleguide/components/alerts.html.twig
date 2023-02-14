@@ -14,5 +14,36 @@
 {% block main_content %}
     <div class="main-content">
         <h1>Alerts</h1>
+
+        <section>
+            <div class="section-title">Basic</div>
+            <div class="section-content">
+                <div class="alert alert-primary"><p>Lorem ipsum</p></div>
+                <div class="alert alert-primary">
+                    <p>
+                        <span class="title">Title</span>
+                        Lorem ipsum
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">With icon</div>
+            <div class="section-content">
+                <div class="alert alert-primary">
+                    <span class="icon-warning"></span>
+                    <p>Lorem ipsum</p>
+                </div>
+                <div class="alert alert-primary">
+                    <span class="icon-warning"></span>
+                    <p>
+                        <span class="title">Title</span>
+                        Lorem ipsum
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </div>
 {% endblock %}
