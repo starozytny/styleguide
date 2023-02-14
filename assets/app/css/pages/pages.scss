@@ -18,3 +18,31 @@
     }
   }
 }
+
+h1 + .styleguide-content-col{
+  margin-top: 1.2rem;
+}
+
+.styleguide-content-col{
+  @include flex(column, flex-start, flex-start, var(--espaceDiv));
+
+  .styleguide-section{
+    width: 100%;
+  }
+}
+
+.styleguide-section{
+  background-color: var(--alpha);
+  border-radius: calc(var(--radius) * 2);
+  padding: var(--espaceDiv);
+}
+
+.styleguide-section-title{
+  @include fontSemibold();
+  font-size: 20px;
+  margin-bottom: 0.8rem;
+}
+
+.styleguide-section-content{
+  @include flex(column, flex-start, flex-start, var(--espaceEls));
+}
