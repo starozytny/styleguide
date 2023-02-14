@@ -1,11 +1,47 @@
-{% extends 'app/pages/styleguide/template.html.twig' %}
+{% extends 'app/pages/styleguide/components/template.html.twig' %}
+
+{% block title %}Cards{% endblock %}
+
+{% block breadcrumb %}
+    {% set breadcrumbs1 = [
+        { text: 'Cards', url: path('app_styleguide_components_cards')  }
+    ] %}
+    {% set breadcrumbs = breadcrumbs | merge(breadcrumbs1) %}
+
+    {{ parent() }}
+{% endblock %}
 
 {% block main_content %}
     <div class="main-content">
-        <ul>
-            <li><a href="{{ path('app_homepage') }}">Accueil</a></li>
-        </ul>
+        <h1>Cards</h1>
 
-        <h1>Buttons</h1>
+        <div class="styleguide-content-col">
+            <section class="styleguide-section">
+                <div class="styleguide-section-title">Basic</div>
+                <div class="styleguide-section-content">
+                    <div class="card card-0">
+                        <div class="card-header">
+                            <div class="card-header-name">Title</div>
+                        </div>
+                        <div class="card-body">Lorem ipsum</div>
+                        <div class="card-footer">
+                            <a>Link</a>
+                        </div>
+                    </div>
+                    <div class="card card-0">
+                        <div class="card-header">
+                            <div class="card-header-name">Title</div>
+                        </div>
+                        <div class="card-body">Lorem ipsum</div>
+                        <div class="card-footer actions">
+                            <a href="#" class="txt-button txt-primary semibold">
+                                <span>Link</span>
+                                <span class="icon-right-arrow"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 {% endblock %}
