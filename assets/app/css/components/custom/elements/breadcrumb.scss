@@ -1,0 +1,18 @@
+.breadcrumb{
+  padding: 0.8rem var(--espaceLayout) 0 var(--espaceLayout);
+
+  .breadcrumb-separator{
+    opacity: 0.75;
+  }
+
+  .breadcrumb-item{
+    color: var(--txt);
+    opacity: 0.75;
+    transition: opacity 0.2s ease-in-out;
+
+    &.active,
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
