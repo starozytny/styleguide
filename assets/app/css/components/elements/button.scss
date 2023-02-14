@@ -1,5 +1,5 @@
 .txt-button, .btn-icon, .btn{
-  @include flex(row, center, center, 8px);
+  @include flex(row, center, center, 6px);
 }
 
 .btn-icon, .btn {
@@ -8,10 +8,30 @@
   text-align: center;
   border: 1px solid transparent;
   background-color: transparent;
+
+  &.btn-loader-with-text,
+  &.btn-loader-without-text{
+    cursor: initial;
+
+    &:hover{
+      transform: none;
+      opacity: 1;
+    }
+  }
 }
 
 .btn-icon{
   padding: 6px;
+  transition: transform 0.2s linear;
+
+  span:not(.tooltip, [class^="icon-"]){
+    font-size: 14px;
+    transform: translateY(2px);
+  }
+
+  &:hover{
+    transform: scale(0.95);
+  }
 }
 
 .btn{
@@ -19,7 +39,20 @@
   transition: opacity 0.2s ease-in-out;
 
   &:hover{
-    opacity: 0.85;
+    opacity: 0.75;
+  }
+}
+
+.btn.btn-loader-without-text{
+
+  [class^="icon-"]{
+    position: absolute;
+    top: 10px; left: 0;
+    width: 100%;
+  }
+
+  span:not([class^="icon-"]){
+    opacity: 0;
   }
 }
 

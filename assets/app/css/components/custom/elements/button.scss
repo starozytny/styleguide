@@ -1,14 +1,20 @@
-.btn{
+.btn, .btn-icon{
   border-radius: var(--radius);
 }
 
 $data:
         "primary" var(--primary) var(--primary) var(--alpha),
-        "default" var(--alpha) var(--alpha) var(--txt),
+        "warning" var(--warning) var(--warning) var(--alpha),
+        "danger" var(--danger) var(--danger) var(--alpha),
+        "success" var(--success) var(--success) var(--alpha),
+        "grey3" var(--grey3) var(--grey3) var(--alpha),
+        "grey4" var(--grey4) var(--grey4) var(--alpha),
+        "default" var(--alpha) var(--grey2) var(--txt),
 ;
 
 @each $name, $bg, $border, $txt in $data {
-  .btn-#{$name} {
+  .btn-#{$name},
+  .btn-icon-#{$name} {
     background: $bg;
     border-color: $border;
     color: $txt;
