@@ -13,9 +13,9 @@
     {% include "layout/components/page-loader.html.twig" %}
 
     {% if layout_num == 0 %}
-        {% include "layout/layouts/layout-0.html.twig" %}
+        {% include "layout/layouts/layout-0.html.twig" with{main_content: block('main_content')} %}
     {% else %}
-        {% include "layout/layouts/layout-1.html.twig" %}
+        {% include "layout/layouts/layout-1.html.twig" with{main_content: block('main_content')} %}
     {% endif %}
 {% endblock %}
 

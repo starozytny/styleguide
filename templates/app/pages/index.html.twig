@@ -3,26 +3,7 @@
 {% block title %}Accueil{% endblock %}
 
 {% block main_content %}
-    <ul>
-        <li>
-            <a href="{{ path('app_styleguide_layouts_layout', {num: 0, position: "horizontal", type: "brut"}) }}">
-                Layout horizontal 0 brut
-            </a>
-        </li>
-        <li>
-            <a href="{{ path('app_styleguide_layouts_layout', {num: 0, position: "vertical", type: "brut"}) }}">
-                Layout vertical 0 brut
-            </a>
-        </li>
-        <li>
-            <a href="{{ path('app_styleguide_layouts_layout', {num: 0, position: "horizontal", type: "custom"}) }}">
-                Layout horizontal 0 custom
-            </a>
-        </li>
-        <li>
-            <a href="{{ path('app_styleguide_layouts_layout', {num: 0, position: "vertical", type: "custom"}) }}">
-                Layout vertical 0 custom
-            </a>
-        </li>
-    </ul>
+    <div class="main-content">
+        <div>Hello world</div>
+    </div>
 {% endblock %}
