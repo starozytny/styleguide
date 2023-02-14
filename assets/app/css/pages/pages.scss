@@ -1,18 +1,18 @@
-.components{
+.components, .style{
   @include flex(row, flex-start, flex-start, var(--espaceDiv));
   flex-wrap: wrap;
+}
 
-  .card-0{
-    .actions{
-      .txt-button{
+.card-0{
+  .actions{
+    .txt-link{
+      [class^="icon-"]{
+        transition: transform 0.2s linear;
+      }
+
+      &:hover{
         [class^="icon-"]{
-          transition: transform 0.2s linear;
-        }
-
-        &:hover{
-          [class^="icon-"]{
-            transform: translate(4px, -1px);
-          }
+          transform: translate(4px, -1px);
         }
       }
     }

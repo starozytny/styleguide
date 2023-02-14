@@ -1,8 +1,8 @@
-.txt-button, .btn-icon, .btn{
+.txt-link, .txt-button, .btn-icon, .btn{
   @include flex(row, center, center, 6px);
 }
 
-.btn-icon, .btn {
+.btn-icon, .btn, .txt-button {
   position: relative;
   width: auto;
   text-align: center;
@@ -18,6 +18,11 @@
       opacity: 1;
     }
   }
+}
+
+.txt-button{
+  padding: 6px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .btn-icon{
@@ -56,7 +61,7 @@
   }
 }
 
-.txt-button, .btn{
+.txt-link, .txt-button, .btn{
   & > [class^="icon"]{
     display: inline-block;
     transform: translateY(-1px);
@@ -70,7 +75,7 @@
 //                     | |  |_|\___/_____|  |_|    | |
 //                     |__|                       |__|
 @media (min-width: 1024px) {
-  .btn-icon, .btn {
+  .txt-link, .txt-button, .btn-icon, .btn {
     cursor: pointer;
   }
 }
