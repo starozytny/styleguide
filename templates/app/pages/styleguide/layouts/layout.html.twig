@@ -2,10 +2,13 @@
 
 {% block breadcrumb %}
     {% set breadcrumbs = [
-        { icon: 'layer', text: 'Layouts2', url: path('app_styleguide_layouts_index')  }
+        { icon: 'layer', text: 'Layouts', url: path('app_styleguide_layouts_index')  }
     ] %}
     {{ parent() }}
 {% endblock %}
 
 {% block main_content %}
+    <div class="main-content">
+        <a class="btn btn-primary" href="{{ path('app_styleguide_layouts_index') }}">Retour</a>
+    </div>
 {% endblock %}

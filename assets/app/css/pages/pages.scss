@@ -46,3 +46,8 @@ h1 + .styleguide-content-col{
 .styleguide-section-content{
   @include flex(column, flex-start, flex-start, var(--espaceEls));
 }
+
+.styleguide-section-content-row{
+  @include flex(row, flex-start, flex-start, var(--espaceEls));
+  flex-wrap: wrap;
+}

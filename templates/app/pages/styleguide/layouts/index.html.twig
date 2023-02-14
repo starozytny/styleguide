@@ -1,14 +1,51 @@
 {% extends 'app/pages/styleguide/layouts/template.html.twig' %}
 
-{% block breadcrumb %}
-    {% set breadcrumbs1 = [
-        { icon: 'layer', text: 'Layouts2', url: path('app_styleguide_layouts_index')  }
-    ] %}
-    {% set breadcrumbs = breadcrumbs | merge(breadcrumbs1) %}
-
-    {{ parent() }}
-{% endblock %}
-
+{% block title %}Layouts{% endblock %}
 
 {% block main_content %}
+    <div class="main-content">
+
+        <div class="styleguide-content-col">
+            <section class="styleguide-section">
+                <div class="styleguide-section-title">Layout 0</div>
+                <div class="styleguide-section-content-row">
+                    {% set components = [
+                        {
+                            name: "Horizontal Brut", textLink: "Aperçu", url: path('app_styleguide_layouts_layout', {num: 0, position: "horizontal", type: "brut"}),
+                            content: "Layout 0 horizontal brut"
+                        },
+                        {
+                            name: "Vertical Brut", textLink: "Aperçu", url: path('app_styleguide_layouts_layout', {num: 0, position: "vertical", type: "brut"}),
+                            content: "Layout 0 vertical brut"
+                        },
+                        {
+                            name: "Horizontal Custom", textLink: "Aperçu", url: path('app_styleguide_layouts_layout', {num: 0, position: "horizontal", type: "custom"}),
+                            content: "Layout 0 horizontal custom"
+                        },
+                        {
+                            name: "Vertical Custom", textLink: "Aperçu", url: path('app_styleguide_layouts_layout', {num: 0, position: "vertical", type: "custom"}),
+                            content: "Layout 0 vertical custom"
+                        },
+                    ] %}
+
+                    {% for elem in components %}
+                        <div class="card card-0">
+                            <div class="card-header">
+                                <div class="card-header-name">{{ elem.name }}</div>
+                            </div>
+                            <div class="card-body">{{ elem.content }}</div>
+                            <div class="card-footer actions">
+                                <a href="{{ elem.url }}" class="txt-button txt-primary semibold">
+                                    <span>{{ elem.textLink }}</span>
+                                    <span class="icon-right-arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+        </div>
+
+    </div>
 {% endblock %}
