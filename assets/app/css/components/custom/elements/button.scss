@@ -1,0 +1,16 @@
+.btn{
+  border-radius: var(--radius);
+}
+
+$data:
+        "primary" var(--primary) var(--primary) var(--alpha),
+        "default" var(--alpha) var(--alpha) var(--txt),
+;
+
+@each $name, $bg, $border, $txt in $data {
+  .btn-#{$name} {
+    background: $bg;
+    border-color: $border;
+    color: $txt;
+  }
+}

@@ -1,11 +1,31 @@
-{% extends 'app/pages/styleguide/template.html.twig' %}
+{% extends 'app/pages/styleguide/components/template.html.twig' %}
+
+{% block title %}Buttons{% endblock %}
+
+{% block breadcrumb %}
+    {% set breadcrumbs1 = [
+        { text: 'Buttons', url: path('app_styleguide_components_buttons')  }
+    ] %}
+    {% set breadcrumbs = breadcrumbs | merge(breadcrumbs1) %}
+
+    {{ parent() }}
+{% endblock %}
 
 {% block main_content %}
     <div class="main-content">
-        <ul>
-            <li><a href="{{ path('app_homepage') }}">Accueil</a></li>
-        </ul>
-
         <h1>Buttons</h1>
+
+        <div class="styleguide-content-col">
+            <section class="styleguide-section">
+                <div class="styleguide-section-title">Basic</div>
+                <div class="styleguide-section-content">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-primary">
+                        <span class="icon-home"></span>
+                        <span>Primary</span>
+                    </button>
+                </div>
+            </section>
+        </div>
     </div>
 {% endblock %}

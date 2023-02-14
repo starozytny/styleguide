@@ -14,22 +14,19 @@
   padding: 6px;
 }
 
-.txt-button{
-  & > [class^="icon"]{
-    display: inline-block;
-    transform: translateY(-1px);
+.btn{
+  padding: 8px 20px;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover{
+    opacity: 0.85;
   }
 }
 
-$data:
-        "default" var(--alpha) var(--alpha) var(--txt),
-;
-
-@each $name, $bg, $border, $txt in $data {
-  .btn-icon-#{$name} {
-    background: $bg;
-    border-color: $border;
-    color: $txt;
+.txt-button, .btn{
+  & > [class^="icon"]{
+    display: inline-block;
+    transform: translateY(-1px);
   }
 }
 
